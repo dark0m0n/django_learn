@@ -1,5 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 
-from . import views
+from learn_site.views import index, task
 
-urlpatterns = []
+urlpatterns = [
+    path('', index),
+    path('tasks/<int:pk>/', task),
+]
